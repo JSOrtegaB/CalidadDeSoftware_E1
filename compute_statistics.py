@@ -1,5 +1,6 @@
 """
-This is a simple Python script that prints 'hola' to the console.
+This script reads a file containing numbers and converts 
+each number to its binary and hexadecimal representation.
 """
 import os
 import sys
