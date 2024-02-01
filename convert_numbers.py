@@ -29,8 +29,7 @@ def to_binary(number, bits=32):
     basic algorithms, including negative numbers."""
     if number >= 0:
         return bin(number)[2:].zfill(bits)
-    else:
-        return bin(number & (2**bits - 1))[2:]
+    return bin(number & (2**bits - 1))[2:]
 
 
 def to_hexadecimal(number, bits=32):
@@ -38,8 +37,7 @@ def to_hexadecimal(number, bits=32):
     using basic algorithms, including negative numbers."""
     if number >= 0:
         return hex(number)[2:].upper()
-    else:
-        return hex(number & (2**bits - 1))[2:].upper()
+    return hex(number & (2**bits - 1))[2:].upper()
 
 
 def process_file(filename):
