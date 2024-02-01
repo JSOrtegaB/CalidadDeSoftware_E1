@@ -34,9 +34,16 @@ def calculate_mode(numbers):
     frequency = {}
     for number in numbers:
         frequency[number] = frequency.get(number, 0) + 1
+
     max_freq = max(frequency.values())
-    modes = [number for number, freq in frequency.items() if freq == max_freq]
+
+    if max_freq == 1:
+        return {}  # or return something like {"No mode": 0}
+
+    modes = {number: freq for number, freq in frequency.items() if freq == max_freq}
     return modes
+
+
 
 def calculate_variance(numbers, mean):
     return sum((x - mean) ** 2 for x in numbers) / len(numbers)
