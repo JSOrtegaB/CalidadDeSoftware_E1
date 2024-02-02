@@ -48,10 +48,10 @@ if __name__ == "__main__":
 
     input_filepath = sys.argv[1]
     basename = os.path.basename(input_filepath)
-    filename_without_extension = basename.split('.')[0]  # Renamed for clarity
+    filename_without_extension = basename.split('.')[0]
     start_time = time.perf_counter()
-    counts = count_words(input_filepath)  # Use of generic variable name to avoid shadowing
+    counts = count_words(input_filepath)  
     end_time = time.perf_counter()
-    elapsed = end_time - start_time  # Renamed to avoid shadowing
+    elapsed = end_time - start_time 
     write_results(counts, filename_without_extension, elapsed)
     print(f"Total Unique Count: {len(counts)}  Execution and calculation took {elapsed:} seconds.")
